@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div class="crud">
+	<div class="head">
+		<h2>list</h2>
+		<p>of people</p>
+	</div>
+	<div class="inputs">
+		<label>Nom:</label>
+		<input type="text" id="title" placeholder="title">
+		<label>Prenom:</label>
+		<input type="text" id="count" placeholder="prenom">
+		<label>Date:</label>
+		<input type="Date" id="category">
+		<div class="option"></div>
+		<label>genre:</label>
+		<select id="personne">
+			<option value="homme">homme</option>
+			<option value="femme">femme</option>
+		</select>
+		<button id="submit">create</button>
+	</div>
+	<div class="outputs">
+		<div class="searchBlock">
+			<input onkeyup="searchData(value);" type="text" id="search" placeholder="search">
+			<div class="btnsearch">
+<button id="searchTitle" onclick="getSearchMod(this.id)">search by Nom</button>
+<button id="searchCategory" onclick="getSearchMod(this.id)">search by genre</button>
+			</div>
+		</div>
+		<div id="deleteAll"></div>
+		<table>
+			<tr>
+				<th>id</th>
+				<th>Nom</th>
+				<th>prenom</th>
+				<th>date</th>
+				<th>genre</th>
+				<th>delete</th>
+				<th>update</th>
+			</tr>
+			<tbody id="tbody">
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</div>
+</body>
+</html>
